@@ -1,23 +1,80 @@
+/* General Vibe */
 body {
-  font-family: Arial;
-  background: #f2f2f2;
+    background-color: #fafafa;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background 0.5s;
 }
-.login-box {
-  width: 300px;
-  margin: 100px auto;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
+
+/* Login Card Structure */
+.login-card {
+    background: white;
+    border: 1px solid #dbdbdb;
+    padding: 40px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
 input {
-  width: 90%;
-  padding: 10px;
-  margin: 10px 0;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background: #fafafa;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    box-sizing: border-box;
 }
+
 button {
-  padding: 10px 20px;
-  background: #007bff;
-  color: white;
-  border: none;
+    width: 100%;
+    padding: 8px;
+    margin-top: 15px;
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* The "Hacked" Visuals */
+.hidden {
+    display: none;
+}
+
+#hackedScreen {
+    color: #00ff00;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.glitch-text {
+    color: red;
+    font-size: 3rem;
+    text-shadow: 2px 2px #550000;
+    animation: blink 0.2s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.warning {
+    border: 2px solid red;
+    padding: 10px;
+    display: inline-block;
+    margin: 20px 0;
 }
