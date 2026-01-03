@@ -1,17 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Secure Login</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Awareness Demo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="login-box">
-    <h2>Login</h2>
-    <form>
-      <input type="text" placeholder="Username" required>
-      <input type="password" placeholder="Password" required>
-      <button type="submit">Login</button>
-    </form>
-  </div>
+
+    <div class="login-card" id="loginBox">
+        <div class="logo">IG Parody</div>
+        <p></p>
+        
+        <input type="text" id="username" placeholder="Phone number, username, or email">
+        <input type="password" id="password" placeholder="Password">
+        
+        <button onclick="showHack()">Log In</button>
+    </div>
+
+    <div id="hackedScreen" class="hidden">
+        <h1 class="glitch-text">ACCESS DENIED</h1>
+        <div class="warning">PHISHING ATTEMPT DETECTED</div>
+        <p>In a real attack, your data would be gone by now.</p>
+        <button onclick="location.reload()">Reset Demo</button>
+    </div>
+
+    <script>
+        function showHack() {
+            document.getElementById('loginBox').style.display = 'none';
+            document.getElementById('hackedScreen').classList.remove('hidden');
+            document.body.style.backgroundColor = "black";
+        }
+    </script>
 </body>
 </html>
